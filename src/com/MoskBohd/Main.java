@@ -11,6 +11,10 @@ public class Main {
 
         FilesManager filesManagerHarry = new FilesManager("harry.txt");
         filesManagerHarry.getTextFromFile();
-        filesManagerHarry.getDistinctWordsWithAmount();
+        filesManagerHarry.findDistinctWordsWithAmount();
+        filesManagerHarry.findAllTheProperNames();
+
+        filesManagerHarry.createTextFileForResults();
+
     }
 }
