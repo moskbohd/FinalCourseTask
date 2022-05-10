@@ -23,8 +23,8 @@ public class FilesManager {
     private List<String> textContent = new ArrayList<String>();
     private String[] arrayOfWords;
     private List<String> listOfDistinctWords;
-    List<Map.Entry<String, Long>> listOfDistinctWordsWithTheirCount;
-    List<Map.Entry<String, Long>> properNamesMap;
+    List<Map.Entry<String, Long>> listOfDistinctWordsWithTheirCount = new ArrayList<>();
+    List<Map.Entry<String, Long>> properNamesMap  = new ArrayList<>();
 
 
     // GETTERS AND SETTERS
@@ -123,8 +123,7 @@ public class FilesManager {
                 .collect(toList());
 
     //    1.7.  Count them and arrange in alphabetic order.
-        List<Map.Entry<String, Long>> properName = result;
-        properName.clear();
+        List<Map.Entry<String, Long>> properName = new ArrayList<>();
         for (Map.Entry<String, Long> word:result){
             if(word.getKey().matches("[A-Z]\\w*")){
                 System.out.println(word);
